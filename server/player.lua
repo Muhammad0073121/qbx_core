@@ -103,6 +103,10 @@ function SetJob(identifier, jobName, grade)
         end
     end
 
+    if jobName == 'police' or jobName == 'ambulance' then
+        SetGang(identifier, 'none', 0)
+    end
+
     return SetPlayerPrimaryJob(player.PlayerData.citizenid, jobName)
 end
 
@@ -348,6 +352,10 @@ function SetGang(identifier, gangName, grade)
         if not success then
             return false, errorResult
         end
+    end
+
+    if player.PlayerData.job.name == 'police' or player.PlayerData.job.name == 'ambulance' then
+        SetJob(identifier, 'unemployed', 0)
     end
 
     return SetPlayerPrimaryGang(player.PlayerData.citizenid, gangName)
