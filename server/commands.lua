@@ -326,7 +326,7 @@ lib.addCommand('setgang', {
         Notify(source, locale('error.not_online'), 'error')
         return
     end
-
+    print('args[locale('command.setgang.params.gang.name'')
     local success, errorResult = player.Functions.SetJob(args[locale('command.setgang.params.gang.name')], args[locale('command.setgang.params.grade.name')] or 0)
     assert(success, json.encode(errorResult))
 end)
