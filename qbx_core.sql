@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `players` (
+	playersCREATE TABLE IF NOT EXISTS `players` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) NOT NULL,
   `cid` int(11) DEFAULT NULL,
